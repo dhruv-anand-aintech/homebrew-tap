@@ -9,11 +9,18 @@ class WifiPriorityTui < Formula
 
   depends_on "python@3.11"
 
+  # Only Textual (main dependency); pip will resolve transitive deps
+  resource "textual" do
+    url "https://files.pythonhosted.org/packages/source/t/textual/textual-0.47.1.tar.gz"
+    sha256 "4b82e317884bb1092f693f474c319ceb068b5a0b128b121f1aa53a2d48b4b80c"
+  end
+
+  def python3
+    "python3.11"
+  end
+
   def install
-    venv = virtualenv_create(libexec, "python3.11")
-    system venv.root/"bin/pip", "install", "--upgrade", "pip"
-    system venv.root/"bin/pip", "install", buildpath
-    bin.install_symlink venv.root/"bin/wifi-priority"
+    virtualenv_install_with_resources
   end
 
   def caveats
