@@ -3,14 +3,15 @@ class WifiPriorityTui < Formula
 
   desc "Interactive terminal UI for managing macOS WiFi network priorities"
   homepage "https://github.com/dhruv-anand-aintech/wifi-priority-tui"
-  url "https://files.pythonhosted.org/packages/py3/w/wifi_priority_tui/wifi_priority_tui-0.4.9-py3-none-any.whl"
-  sha256 "d7b27bd86acc4568b7ab641cfcbec51f7b04c4665acc4b6b14fcb02a795f5a58"
+  url "https://files.pythonhosted.org/packages/source/w/wifi-priority-tui/wifi_priority_tui-0.4.9.tar.gz"
+  sha256 "ef2ab8e18a9f0b112552fc2b8b6c5d0f84d3b8f49b27dbca6cd961687d1d40e5"
   license "MIT"
 
   depends_on "python@3.11"
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3.11")
+    venv.pip_install_and_link buildpath
   end
 
   def caveats
