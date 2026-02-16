@@ -14,21 +14,35 @@ brew install --cask dhruv-anand-aintech/tap/wifi-priority
 
 Then launch from Spotlight or Applications folder.
 
-### WiFi Priority TUI (Python)
+### WiFi Priority TUI (Terminal)
 
-Terminal UI version available via pip:
+Terminal UI with keyboard-driven navigation:
 
 ```bash
-pip install wifi-priority-tui
+brew install dhruv-anand-aintech/tap/wifi-priority-tui
+```
+
+Run with:
+```bash
 sudo wifi-priority
 ```
+
+**Note:** Requires sudo to modify network settings.
 
 ## About
 
 WiFi Priority allows you to reorder macOS WiFi network priorities. macOS connects to networks in priority order, and this tool lets you customize that order.
 
-- **SwiftUI App**: Native drag-and-drop interface
-- **TUI**: Terminal-based interface with keyboard controls
+- **SwiftUI App**: Native drag-and-drop interface (Cask)
+- **TUI**: Terminal-based interface with keyboard controls (Formula)
+
+## Installation Options Comparison
+
+| Method | App Type | Installation | Best For |
+|--------|----------|--------------|----------|
+| `brew install --cask dhruv-anand-aintech/tap/wifi-priority` | SwiftUI | `/Applications` | GUI users, drag-and-drop |
+| `brew install dhruv-anand-aintech/tap/wifi-priority-tui` | TUI | Python virtualenv | Terminal enthusiasts |
+| `pip install wifi-priority-tui` | TUI | System/venv Python | Python developers |
 
 ## Links
 
