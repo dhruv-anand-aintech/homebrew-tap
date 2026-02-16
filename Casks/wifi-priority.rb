@@ -7,7 +7,10 @@ cask "wifi-priority" do
   desc "Native macOS app to manage WiFi network priorities with drag-and-drop"
   homepage "https://github.com/dhruv-anand-aintech/wifi-priority-tui"
 
-  app "WiFiPrioritySwiftUI.app"
+  app "WiFiPrioritySwiftUI.app", target: "/Applications/WiFi Priority.app"
 
-  zap trash: "~/Library/Preferences/com.dhruvanandintech.wifipriority.plist"
+  zap trash: [
+    "~/Library/Preferences/com.dhruvanandintech.wifipriority.plist",
+    "/Applications/WiFi Priority.app",
+  ]
 end
