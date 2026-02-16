@@ -11,7 +11,9 @@ class WifiPriorityTui < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.11")
-    venv.pip_install_and_link buildpath
+    system venv.root/"bin/pip", "install", "--upgrade", "pip"
+    system venv.root/"bin/pip", "install", buildpath
+    bin.install_symlink venv.root/"bin/wifi-priority"
   end
 
   def caveats
