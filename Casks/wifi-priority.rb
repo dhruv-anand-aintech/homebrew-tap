@@ -1,5 +1,5 @@
 cask "wifi-priority" do
-  version "0.4.9"
+  version "0.5.0"
   sha256 "33fe66c687b0b9bd68875e051dc3993494a49d5b451b8c412f4dc212e6a3e1dc"
 
   url "https://github.com/dhruv-anand-aintech/wifi-priority-tui/releases/download/v#{version}/WiFiPrioritySwiftUI-#{version}.zip"
