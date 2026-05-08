@@ -1,9 +1,9 @@
 class AgentSessionViewer < Formula
   desc "Live multi-platform AI coding session viewer (Claude Code, Cursor, Codex, OpenCode, Hermes)"
   homepage "https://github.com/dhruv-anand-aintech/agent-session-viewer"
-  url "https://registry.npmjs.org/agent-session-viewer/-/agent-session-viewer-0.1.19.tgz"
+  url "https://registry.npmjs.org/agent-session-viewer/-/agent-session-viewer-0.1.20.tgz"
   # Update sha256 after first npm publish: `brew fetch --build-from-source agent-session-viewer`
-  sha256 "58f9f1ee1bf632f3b4c8ace8c5ea4dd873a522d5d4a47da8a9174c25bdfc8f9f"
+  sha256 "e7321834a409c5982b3a7d30523841ed141091bf474f92c791c09f37bb1e6052"
   license "MIT"
 
   depends_on "node"
